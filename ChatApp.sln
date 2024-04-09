@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatApp.Entities", "ChatApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatApp.StorageService", "ChatApp.FileService\ChatApp.StorageService.csproj", "{D6B93D37-A0A9-45FB-8937-CD07C193A837}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserProfileImage", "UserProfileImage", "{8714D34D-7910-4B8A-9BF3-E09A32059BF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -96,10 +96,9 @@ namespace ChatApp.Api.Controllers
         }
 
 
-
         [HttpPost]
         [Route("/UploadProfileImage")]
-        public async Task<IActionResult> UploadProfileImage([FromForm] IFormFile Image)
+        public async Task<IActionResult> UploadProfileImage([FromForm]IFormFile Image)
         {
             await _userService.UploadProfileImage(Image);
             return Ok();

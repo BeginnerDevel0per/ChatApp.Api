@@ -10,7 +10,7 @@ namespace ChatApp.StorageService.ImageFiles
     {
         public Stream? GetImage(string PathName)
         {
-            var imagePath = Path.Combine(@"..\ChatApp.Api\wwwroot\UserProfileImage", PathName);
+            var imagePath = Path.Combine(Path.GetDirectoryName("wwwroot/UserProfileImage/"), PathName);
 
             if (System.IO.File.Exists(imagePath))
                 return System.IO.File.OpenRead(imagePath);
@@ -32,7 +32,7 @@ namespace ChatApp.StorageService.ImageFiles
 
         public bool RemoveImageAsync(string imagePathName)
         {
-            string filePath = Path.Combine(@"..\ChatApp.Api\wwwroot\UserProfileImage", imagePathName);
+            string filePath = Path.Combine(Path.GetDirectoryName("wwwroot/UserProfileImage/"), imagePathName);
             if (System.IO.File.Exists(filePath))//dosya varmı diye kontrol ediyor
             {
                 System.IO.File.Delete(filePath);//varsa siliyor
@@ -57,8 +57,8 @@ namespace ChatApp.StorageService.ImageFiles
             var extent = Path.GetExtension(Image.FileName);
             //yeni dosya adını uzantısıyla birlikte veriyoruz.
             var randomName = $"{Guid.NewGuid()}{extent}";
-            
-            var path = Path.Combine(@"..\ChatApp.Api\wwwroot\UserProfileImage", randomName);
+
+            var path = Path.Combine(Path.GetDirectoryName("wwwroot/UserProfileImage/"), randomName);
             using (var stream = new FileStream(path, FileMode.Create))
             {
                 await Image.CopyToAsync(stream);

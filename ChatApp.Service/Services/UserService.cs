@@ -116,7 +116,6 @@ namespace ChatApp.Service.Services
         public async Task UploadProfileImage(IFormFile Image)
         {
 
-
             var UserId = _getInformationFromToken.GetUserIdAndUserName().Id;
             var User = await _userRepository.Where(x => x.Id == UserId).FirstOrDefaultAsync();
             if (User == null)
