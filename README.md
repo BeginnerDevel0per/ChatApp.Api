@@ -63,7 +63,7 @@ Frontend: https://github.com/BeginnerDevel0per/ChatApp.UI
 - ID'si gönderilen kullanıcıyla giriş yapan kullanıcının tüm mesajlarını döner. 
 
 
-#### İki kullanıcı arasındaki mesajlar
+#### Kullanıcı adıyla arama
 ```http
   GET /SearchUser/{UserName}
 ```
@@ -71,7 +71,7 @@ Frontend: https://github.com/BeginnerDevel0per/ChatApp.UI
 
 
 
-#### İki kullanıcı arasındaki mesajlar
+#### Profil bilgilerini getirme
 ```http
   GET /GetProfile
 ```

@@ -48,9 +48,9 @@ namespace ChatApp.Api.Middlewares
                 {
 
                     var date = Convert.ToDateTime(LastUpdateDate).ToString("dd.MM.yyyy HH:mm");
-                    var deneme = Convert.ToDateTime(user.PasswordUpdateDate).ToString("dd.MM.yyyy HH:mm");
+                    var PasswordUpdateDate = Convert.ToDateTime(user.PasswordUpdateDate).ToString("dd.MM.yyyy HH:mm");
 
-                    if (date != deneme)
+                    if (date != PasswordUpdateDate)
                     {
                         throw new UnauthorizedException("Geçersiz Token Değeri");
                     }
